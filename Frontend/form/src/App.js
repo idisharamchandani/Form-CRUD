@@ -17,7 +17,6 @@ function App() {
      <Routes>
      <Route exact path='/' element={<Form />} />
      <Route exact path='/edit/:id' element={<UpdateForm />} />
-       {/* <Route exact path="/home" element={<Welcome />} /> */}
      </Routes>
      </Router>
     </div>

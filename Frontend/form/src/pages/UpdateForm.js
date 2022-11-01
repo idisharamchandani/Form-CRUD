@@ -4,9 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export default function UpdateForm() {
 
-    let navigate = useNavigate(); //The useHistory hook gives you access to the history instance that you may use to navigate.
-    const params = useParams(); //The useParams() hook helps us to access the URL parameters from a current route. 
-
+    let navigate = useNavigate(); 
+    const params = useParams(); 
 
     const [user, setUser] = useState({
         Name: "",

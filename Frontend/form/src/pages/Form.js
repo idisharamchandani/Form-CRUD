@@ -16,7 +16,7 @@ export default function Form() {
       setuser({ ...user, [e.target.name]: e.target.value });
     };
      
-    // On Page load display all records 
+   
     const Usersdetail = async () =>  
     {
       var response = fetch('http://localhost:5000/getallusers')
@@ -31,7 +31,7 @@ export default function Form() {
         Usersdetail();
     }, []);
  
-    // Insert Employee Records 
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         e.target.reset();
@@ -41,74 +41,6 @@ export default function Form() {
         Usersdetail();
     };
     
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-
-
-    //     const { Name,Colour } = user;
-
-
-
-
-    //     const res = await fetch("http://localhost:5000/user", {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             Name, Colour
-
-    //         })
-    //     });
-    //     const data = await res.json();
-    //     console.log(data,"data")
-    //     res.send(data);
-
-    //     loadEmployeeDetail();
-
-
-
-
-
-    // }
-    // let name, value;
-    // const handleChange = (e) => {
-    //     name = e.target.name;
-    //     value = e.target.value;
-
-    //     setuser({ ...user, [name]: value })
-    //   };
-
-
-    //   const loadEmployeeDetail = async () =>  
-    // {
-    //   var response = fetch('http://localhost:5000/getallusers')
-    //      .then(function(response){
-    //         return response.json();
-    //       })
-    //      .then(function(myJson) {
-    //         setusersdetails(myJson);
-    //       });
-    // }
-    // useEffect(() => {
-    //   loadEmployeeDetail();
-    // }, []);
-
-
-    //   const users = async () => {
-    //     const response = await fetch("http://localhost:5000/getallusers")
-    //         .then((response) => response.json());
-    //         setusersdetails(response);
-    // };
-
-    // useEffect(() => {
-    //     users();
-    // }, []);
-
-
-                       
     const deleteuser = (id) =>
     {
       axios.delete(`http://localhost:5000/deleteuser/${id}`)
