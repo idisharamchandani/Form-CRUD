@@ -4,7 +4,10 @@ var cors = require('cors');
 var app = express();
 const helmet = require("helmet");
 var users=require('./Controllers/users');
-const port = 5000;
+require("dotenv").config();
+
+var port = process.env.PORT || 5000;
+// const port = 5000;
 var connect = mongoose.connect("mongodb://localhost:27017/users");
 
 // app.use(cors({
