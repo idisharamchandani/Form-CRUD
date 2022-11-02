@@ -6,8 +6,8 @@ const helmet = require("helmet");
 var users=require('./Controllers/users');
 require("dotenv").config();
 
-var port = process.env.PORT || 5000;
-// const port = 5000;
+//var port = process.env.PORT || 5000;
+const port = 5000;
 var connect = mongoose.connect("mongodb://localhost:27017/users");
 
 // app.use(cors({
