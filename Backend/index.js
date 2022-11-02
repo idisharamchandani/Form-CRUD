@@ -8,7 +8,7 @@ require("dotenv").config();
 
 //var port = process.env.PORT || 5000;
 const port = 5000;
-var connect = mongoose.connect("mongodb://localhost:27017/users");
+var connect = mongoose.connect(DB).then(() => {console.log("Connected to DB")}).catch((err) => {console.log(err)});
 
 // app.use(cors({
 //   origin: process.env.BASEURL,
